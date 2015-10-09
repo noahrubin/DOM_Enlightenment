@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Chapter 1 Code </title>
+	</head>
+	<body>
+		<a href="#">Hi</a>
+
+		<script type="text/javascript">
+			//get the reference to the a tag
+			var nodeAnchor = document.querySelector('a');
+			var props = [];
+			// loop over element node object, get all properties & methods (including inherited ones)
+			for (var key in nodeAnchor) {
+				props.push(key);
+			}
+			console.log(props.sort());
+		</script>
+	</body>
+</html>
