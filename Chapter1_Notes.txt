@@ -76,4 +76,11 @@ Chapter 1: Node Overview
 	HTML Element Methods:
 		- insertAdjacentHTML()
 ---
-1.5 Identifying the Type and Name of a Node
+1.5: Identifying the Type and Name of a Node
+	- Each node has nodeType and nodeName properties
+	- Checking .nodeType and .nodeName can reveal the methods available
+---
+1.6: Getting Node Values
+	- nodeValue property returns null for most node types, except text and comment nodes
+	- Use is focused on extracting the text from text or comment nodes
+	

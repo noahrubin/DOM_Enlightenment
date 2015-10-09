@@ -7,7 +7,7 @@
 	<body>
 		<a href="#">Hi</a>
 
-		<script type="text/javascript">
+		<script type="text/javascript" id="1.3">
 			//get the reference to the a tag
 			var nodeAnchor = document.querySelector('a');
 			var props = [];
@@ -16,6 +16,63 @@
 				props.push(key);
 			}
 			console.log(props.sort());
+		</script>
+		<script type="text/javascript" id="1.5">
+			console.log(
+				"DOCUMENT_TYPE",
+				document.doctype.nodeName,
+				document.doctype.nodeType
+			);
+			console.log(
+				"DOCUMENT_NODE",
+				document.nodeName,
+				document.nodeType
+			);
+			console.log(
+				"DOCUMENT_FRAGMENT_NODE",
+				document.createDocumentFragment().nodeName,
+				document.createDocumentFragment().nodeType
+			);
+			console.log(
+				"ELEMENT_NODE",
+				document.querySelector('a').nodeName,
+				document.querySelector('a').nodeType
+			);
+			console.log(
+				"TEXT_NODE",
+				document.querySelector('a').firstChild.nodeName,
+				document.querySelector('a').firstChild.nodeType
+			);
+			console.log(
+				"IS <a> AND ELEMENT_NODE?",
+				document.querySelector('a').nodeType == 1 ? "YES" : "NO"
+			);
+			console.log(
+				"IS <a> AND ELEMENT_NODE?",
+				document.querySelector('a').nodeType == Node.ELEMENT_NODE ? "YES" : "NO"
+			);
+		</script>
+		<script type="text/javascript" id="1.6">
+			console.log(
+				"DOCUMENT_TYPE VALUE",
+				document.doctype.nodeValue
+			);
+			console.log(
+				"DOCUMENT VALUE",
+				document.nodeValue
+			);
+			console.log(
+				"DOCUMENT_FRAGMENT_NODE VALUE",
+				document.createDocumentFragment().nodeValue
+			);
+			console.log(
+				"ELEMENT_NODE VALUE",
+				document.querySelector('a').nodeValue
+			);
+			console.log(
+				"ELEMENT_NODE TEXT VALUE",
+				document.querySelector('a').firstChild.nodeValue
+			);
 		</script>
 	</body>
 </html>
